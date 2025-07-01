@@ -1,8 +1,8 @@
 const express = require("express");
 
 const router = express.Router();
-
 const authMiddleware = require("../Middlewares/auth-middleware.js");
+
 //We need to protect this route if the user is not logged in using middleware
 
 router.get("/welcome", authMiddleware, (req, res) => {
